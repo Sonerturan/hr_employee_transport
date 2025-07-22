@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_transport_day_tree" model="ir.ui.view">
+        <field name="name">hr.transport.day.tree</field>
+        <field name="model">hr.transport.day</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="Transport Day">
+                <field name="day_of_week"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_transport_day_form" model="ir.ui.view">
+        <field name="name">hr.transport.day.form</field>
+        <field name="model">hr.transport.day</field>
+        <field name="arch" type="xml">
+            <form string="Transport Day">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="day_of_week"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" group="base.group_user"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_transport_day" model="ir.actions.act_window">
+        <field name="name">Transport Day</field>
+        <field name="res_model">hr.transport.day</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new transport day
+            </p>
+        </field>
+    </record>
+
+</odoo>

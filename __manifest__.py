@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    'name': 'Employee Transport Route',
+    'name': 'Employee Transport',
     'version': '17.0.1.0.0',
     'sequence': 1,
     'category': 'Human Resources',
@@ -12,13 +12,19 @@
         driver linking and seat availability tracking.
     """,
     'author': 'Soner Turan',
-    'website': 'https://github.com/Sonerturan/hr_employee_transport_route',
+    'website': 'https://github.com/Sonerturan/hr_employee_transport',
     'license': 'LGPL-3',
-    'depends': ['base', 'hr'],
+    'depends': ['mail', 'base', 'hr'],
     'data': [
         'security/ir.model.access.csv',
         'views/hr_transport_vehicle.xml',
-        'views/menu.xml'
+        'views/hr_transport_route.xml',
+        'views/hr_transport_stop.xml',
+        'views/hr_transport_shift.xml',
+        'views/hr_transport_plan.xml',
+        'views/hr_transport_day.xml',
+        'views/menu.xml',
+        'data/hr_transport_day_data.xml'
     ],
     'assets': {
         'web.assets_backend': [

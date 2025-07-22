@@ -2,12 +2,42 @@
 <odoo>
     <menuitem id="menu_employee_transport_root"
               name="Employee Transport"
-              sequence="6"/>
+              sequence="1"/>
+
+    <menuitem id="menu_hr_transport_plan"
+          name="Plan"
+          parent="menu_employee_transport_root"
+          action="action_hr_transport_plan"
+          sequence="1"/>
 
     <menuitem id="menu_hr_transport_vehicle"
           name="Vehicles"
           parent="menu_employee_transport_root"
           action="action_hr_transport_vehicle"
-          sequence="1"/>
+          sequence="3"/>
+
+    <menuitem id="menu_hr_transport_route"
+          name="Routes"
+          parent="menu_employee_transport_root"
+          action="action_hr_transport_route"
+          sequence="6"/>
+
+    <menuitem id="menu_hr_transport_stop"
+          name="Stops"
+          parent="menu_employee_transport_root"
+          action="action_hr_transport_stop"
+          sequence="9"/>
+
+    <menuitem id="menu_hr_transport_shift"
+          name="Shifts"
+          parent="menu_employee_transport_root"
+          action="action_hr_transport_shift"
+          sequence="12"/>
+
+    <menuitem id="menu_hr_transport_day"
+          name="Days"
+          parent="menu_employee_transport_root"
+          action="action_hr_transport_day"
+          sequence="15"/>
 
 </odoo>

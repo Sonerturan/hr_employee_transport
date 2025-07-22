@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_transport_day_monday" model="hr.transport.day">
+            <field name="day_of_week">monday</field>
+        </record>
+        <record id="hr_transport_day_tuesday" model="hr.transport.day">
+            <field name="day_of_week">tuesday</field>
+        </record>
+        <record id="hr_transport_day_wednesday" model="hr.transport.day">
+            <field name="day_of_week">wednesday</field>
+        </record>
+        <record id="hr_transport_day_thursday" model="hr.transport.day">
+            <field name="day_of_week">thursday</field>
+        </record>
+        <record id="hr_transport_day_friday" model="hr.transport.day">
+            <field name="day_of_week">friday</field>
+        </record>
+        <record id="hr_transport_day_saturday" model="hr.transport.day">
+            <field name="day_of_week">saturday</field>
+        </record>
+        <record id="hr_transport_day_sunday" model="hr.transport.day">
+            <field name="day_of_week">sunday</field>
+        </record>
+
+    </data>
+</odoo>

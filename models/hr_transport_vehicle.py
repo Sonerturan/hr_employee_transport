@@ -5,11 +5,13 @@ class HRTransportVehicle(models.Model):
     _inherit = ['mail.thread']
     _description = 'HR Transport Vehicle'
 
-    name = fields.Char(string="Name", required=True, Tracking=True)
-    driver_id = fields.Many2one('hr.employee', string="Driver", required=True)
+    name = fields.Char(string="Name", required=True, tracking=True)
+    driver_id = fields.Many2one('hr.employee', string="Driver", required=True, tracking=True)
     vehicle_type = fields.Selection(string="Vehicle Type", selection=[("bus" ,"Bus"), ("minibus" ,"Minibus")], required=True)
-    capacity = fields.Integer(string="Capacity", required=True, Tracking=True, hepl="Total passenger capacity")
-    vehicle_license_plate = fields.Char(string="Vehicle License Plate", Tracking=True)
+    capacity = fields.Integer(string="Capacity", required=True, tracking=True, hepl="Total passenger capacity")
+    vehicle_license_plate = fields.Char(string="Vehicle License Plate", tracking=True)
     current_km = fields.Integer(string="Current Km")
+    active = fields.Boolean(default=True, tracking=True)
+
 
 
