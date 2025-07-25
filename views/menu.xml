@@ -28,16 +28,21 @@
           action="action_hr_transport_stop"
           sequence="9"/>
 
-    <menuitem id="menu_hr_transport_shift"
-          name="Shifts"
+    <menuitem id="menu_hr_transport_configuration"
+          name="Configuration"
           parent="menu_employee_transport_root"
-          action="action_hr_transport_shift"
-          sequence="12"/>
+          sequence="20"/>
 
-    <menuitem id="menu_hr_transport_day"
-          name="Days"
-          parent="menu_employee_transport_root"
-          action="action_hr_transport_day"
-          sequence="15"/>
+        <menuitem id="menu_hr_transport_shift"
+              name="Shifts"
+              parent="menu_hr_transport_configuration"
+              action="action_hr_transport_shift"
+              sequence="45"/>
+
+        <menuitem id="menu_hr_transport_day"
+              name="Days"
+              parent="menu_hr_transport_configuration"
+              action="action_hr_transport_day"
+              sequence="50"/>
 
 </odoo>

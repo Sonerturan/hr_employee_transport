@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shift_morning" model="hr.transport.shift">
+        <field name="name">Morning Shift</field>
+        <field name="departure_time">8.0</field>
+        <field name="shift">morning</field>
+        <field name="active">True</field>
+    </record>
+    <record id="shift_noon" model="hr.transport.shift">
+        <field name="name">Noon Shift</field>
+        <field name="departure_time">12.0</field>
+        <field name="shift">noon</field>
+        <field name="active">True</field>
+    </record>
+    <record id="shift_evening" model="hr.transport.shift">
+        <field name="name">Evening Shift</field>
+        <field name="departure_time">17.0</field>
+        <field name="shift">evening</field>
+        <field name="active">True</field>
+    </record>
+    <record id="shift_night" model="hr.transport.shift">
+        <field name="name">Night Shift</field>
+        <field name="departure_time">22.0</field>
+        <field name="shift">eight</field>
+        <field name="active">True</field>
+    </record>
+</odoo>
