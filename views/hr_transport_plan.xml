@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_transport_plan_tree" model="ir.ui.view">
+        <field name="name">hr.transport.plan.tree</field>
+        <field name="model">hr.transport.plan</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="Transport Plan">
+                <field name="name"/>
+                <field name="route_id" optional="show"/>
+                <field name="vehicle_id" optional="hide"/>
+                <field name="shift_id" optional="show"/>
+                <field name="plan_type" optional="show"/>
+                <field name="empty_seats" optional="show"/>
+                <field name="day_ids" widget="many2many_tags" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_transport_plan_form" model="ir.ui.view">
+        <field name="name">hr.transport.plan.form</field>
+        <field name="model">hr.transport.plan</field>
+        <field name="arch" type="xml">
+            <form string="Transport Plan">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="plan_type"/>
+                            <field name="empty_seats"/>
+                        </group>
+                        <group>
+                            <field name="route_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="shift_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Employees">
+                            <field name="employee_ids" options="{'no_create': True}">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="job_id"/>
+                                    <field name="company_id" invisible="1" column_invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Days">
+                            <field name="day_ids" widget="many2many_checkboxes" options="{'no_create': True}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" group="base.group_user"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_transport_plan" model="ir.actions.act_window">
+        <field name="name">Transport Plan</field>
+        <field name="res_model">hr.transport.plan</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new transport plan
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,2 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 hr_transport_vehicle,access.hr_transport_vehicle,model_hr_transport_vehicle,base.group_user,1,1,1,1
+hr_transport_route,access.hr_transport_route,model_hr_transport_route,base.group_user,1,1,1,1
+hr_transport_stop,access.hr_transport_stop,model_hr_transport_stop,base.group_user,1,1,1,1
+hr_transport_route_stop_rel,access.hr_transport_route_stop_rel,model_hr_transport_route_stop_rel,base.group_user,1,1,1,1
+hr_transport_shift,access.hr_transport_shift,model_hr_transport_shift,base.group_user,1,1,1,1
+hr_transport_day,access.hr_transport_day,model_hr_transport_day,base.group_user,1,0,0,0
+hr_transport_plan,access.hr_transport_plan,model_hr_transport_plan,base.group_user,1,1,1,1
