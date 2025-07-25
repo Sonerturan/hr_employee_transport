@@ -33,6 +33,7 @@
                             <field name="capacity"/>
                             <field name="vehicle_license_plate"/>
                             <field name="current_km"/>
+                            <field name="active" invisible="1"/>
                         </group>
                     </group>
                 </sheet>
