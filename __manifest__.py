@@ -24,7 +24,8 @@
         'views/hr_transport_plan.xml',
         'views/hr_transport_day.xml',
         'views/menu.xml',
-        'data/hr_transport_day_data.xml'
+        'data/hr_transport_day_data.xml',
+        'data/hr_transport_shift_data.xml'
     ],
     'assets': {
         'web.assets_backend': [

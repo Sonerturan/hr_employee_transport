@@ -27,6 +27,7 @@
                         </group>
                         <group>
                             <field name="shift"/>
+                            <field name="active" invisible="1"/>
                         </group>
                     </group>
                 </sheet>
